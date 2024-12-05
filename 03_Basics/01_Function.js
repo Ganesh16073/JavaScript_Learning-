@@ -35,3 +35,33 @@ function loginMessage(userName="sam") // set default value
 const msg=loginMessage("Dhru")
 console.log(msg);
 console.log(loginMessage());
+
+function cart(...num)
+{
+    return num
+}
+console.log(cart(10,20,30,40,50,1,11,21,45));
+
+console.log(`Cart Item Price are =>> ${cart(10,20,30,40,50,1,11,21,45)}`)
+console.log();
+const user={
+    name:"Munna",
+    price:999
+}
+
+function hadleObject(anyObject) // passing object
+{
+    console.log(`The User name is ${anyObject.name} and cart price is ${anyObject.price}`)
+}
+hadleObject(user)
+hadleObject({ // direct object passing
+    name:"Ajay",
+    price:9999
+})
+
+function returnSecondValue(getArray)
+{
+    return getArray[1]
+}
+const arr=[1,2,3,4,5,6,7,8]
+console.log(returnSecondValue(arr))
