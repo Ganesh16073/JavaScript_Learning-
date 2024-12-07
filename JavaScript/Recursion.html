@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var n=3;
+        function table(n,i)
+        {
+            var it=parseInt(i);
+            var no=parseInt(n);
+           
+            if(it===11)
+            {
+                return no;
+            }
+            document.write(it+" * "+no+" = "+(it*no)+"<br>");
+            it++;
+            table(no,it);
+            
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="table(3,1)">print table of 3</button>
+</body>
+</html>

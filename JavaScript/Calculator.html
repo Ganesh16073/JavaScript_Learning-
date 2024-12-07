@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Calculator.css">
+    <script src="./Script/calculator.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="Mainbox">
+            
+            <div class="Result">
+                <input id="set" type="text" placeholder="Standard Calculator"    />
+            </div>
+
+            <table>
+                <tr>
+                    <td id="mod" onclick="appendValue('%')">%</td>
+                    <td id="ce" onclick="clearEntry()">CE</td>
+                    <td id="c" onclick="clearResult()">C</td>
+                    <td id="backspace" onclick="backspace()">&larr;</td>
+                </tr>
+                <tr>
+                    <td id="numdiv" onclick="appendValue('1/x')">1/x</td>
+                    <td id="square" onclick="appendValue('^2')">x²</td>
+                    <td id="root" onclick="appendValue('√')">&radic;x</td>
+                    <td id="division" onclick="appendValue('/')">/</td>
+                </tr>
+                <tr>
+                    <td id="7" onclick="appendValue('7')">7</td>
+                    <td id="8" onclick="appendValue('8')">8</td>
+                    <td id="9" onclick="appendValue('9')">9</td>
+                    <td id="multiplication" onclick="appendValue('*')">*</td>
+                </tr>
+                <tr>
+                    <td id="4" onclick="appendValue('4')">4</td>
+                    <td id="5" onclick="appendValue('5')">5</td>
+                    <td id="6" onclick="appendValue('6')">6</td>
+                    <td id="7" onclick="appendValue('-')">-</td>
+                </tr>
+                <tr>
+                    <td id="1" onclick="appendValue('1')">1</td>
+                    <td id="2" onclick="appendValue('2')">2</td>
+                    <td id="3" onclick="appendValue('3')">3</td>
+                    <td id="addition" onclick="appendValue('+')">+</td>
+                </tr>
+                <tr>
+                    <td id="negation" onclick="appendValue('±')">&plusmn;</td>
+                    <td id="0" onclick="appendValue('0')">0</td>
+                    <td id="dot" onclick="appendValue('.')">.</td>
+                    <td id="equalCal" onclick="calculateResult()">=</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

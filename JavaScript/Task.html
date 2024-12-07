@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container
+        {
+            width: 100%;
+            /* border: 1px solid #000; */
+            min-height: 725px;
+            position: relative;
+            background-image: url(pexels-asadphoto-1456291.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+           
+        }
+        .box{
+            width: 60%;
+            min-height: 500px;
+            position: absolute;
+            top: 15%;
+            left: 20%;
+            /* border: 1px solid #000; */
+            background-color: #9ee17d;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 20px;
+        }
+        .left
+        {
+            width: 50%;
+            /* border: 1px solid #ac1919; */
+        }
+        .box ul{
+            padding: 20px;
+            list-style: none;
+            margin-top: 10px;
+        }
+        .box ul li{
+            padding: 30px;
+            width: 400px;
+            /* color: white; */
+        }
+        .box ul li input{
+            width: 350px;
+            height: 50px;
+        }
+        .right{
+            width: 50%;
+            /* border: 1px solid #000000; */
+            /* color: white; */
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .right h2{
+            padding: 20px;
+        }
+        .right h3{
+            margin-left: 20px;
+            padding: 20px;
+            width: 250px;
+            background-color: rgb(233, 219, 219);
+            padding: 10px;
+            border-radius: 10px;
+            border-style: solid;
+            
+            border-color: blue;
+
+        }
+        .right h3 span{
+            /* background-color: rgb(68, 83, 83); */
+            /* width: 300px; */
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            color: blue;
+            font-weight: bold;
+            font-size: 20px;
+            
+        }
+        .line
+        {
+            display: flex;
+            justify-content: space-between;    
+        }
+    
+    </style>
+    <script type="text/javascript">
+        let Principal,Rate,Year,MonthlyLoanAmt,IntrestAmount,TotalPayAmount;
+        function getPrincipal()
+        {
+            Principal=parseInt(document.getElementById("inputPrincipal").value);
+            document.getElementById("showInputPrincipal").textContent=Principal;
+            document.getElementById("showInputPrincipalRight").textContent=Principal;
+            
+        }
+        function getYear()
+        {
+            Year=parseInt(document.getElementById("inputYear").value);
+            document.getElementById("showInputYear").textContent=Year;
+        }
+        function getRate()
+        {
+            Rate=parseFloat(document.getElementById("inputRate").value);
+            document.getElementById("showInputRate").textContent=Rate;
+        }
+        
+        function calculate()
+        {
+            MonthlyLoanAmt=(Principal * Rate * Year)/100;
+            document.getElementById("monthlyLoanAmpont").textContent=MonthlyLoanAmt.toFixed(2);
+            var tmonth=Year*12;
+            IntrestAmount=tmonth*MonthlyLoanAmt;
+            document.getElementById("intrestAmount").textContent=IntrestAmount.toFixed(2);
+            TotalPayAmount=IntrestAmount+Principal;
+            document.getElementById("totalPayableAmount").textContent=TotalPayAmount.toFixed(2);
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+         <div class="left">
+            <ul>
+                <li>
+                    <div class="line">
+                        <h2>Loan Amout</h2>
+                        <h3>Amount : <span id="showInputPrincipal" >0</span></h3>
+                    </div>
+                    <input type="range" id="inputPrincipal" min="0" max="800000" value="0" oninput="getPrincipal();calculate()">
+                    <div class="line">
+                        <h3>1 Lakh</h3>
+                        <h3>80 Lakh</h3>
+                    </div>
+                   
+                </li>
+                <li>
+                    <div class="line">
+                        <h2>Tenure (Year)</h2>
+                        <h3>Year's : <span id="showInputYear">0</span></h3>
+                    </div>
+                    <input type="range" id="inputYear"  min="1" max="25" value="1" oninput="getYear();calculate()">
+                    <div class="line">
+                        <h3>1 Year</h3>
+                        <h3>25 Year</h3>
+                    </div>
+                    
+                </li>
+                <li>
+                    <div class="line">
+                        <h2>IntrestRate (%P.A)</h2>
+                        <h3>IntrastRate : <span id="showInputRate">0</span></h3>
+                    </div>
+                    <input type="range" id="inputRate" min="" max="18" value="0" step="0.1" oninput="getRate();calculate()">
+                    <div class="line">
+                        <h3>1%<h2>
+                        <h3>18%</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            
+        <div class="right">
+            <h2>Monthly Loan Amount</h2>
+            <h3><span id="monthlyLoanAmpont">0</span></h3>
+            <h2>Principal Amount</h2>
+            <h3><span id="showInputPrincipalRight">0</span></h3>
+            <h2>Intrest Amount</h2>
+            <h3><span id="intrestAmount">0</span></h3>
+            <h2>Total PayAble Amount</h2>
+            <h3><span id="totalPayableAmount">0</span></h3>
+            
+        </div>
+            
+        </div>
+    </div>
+</body>
+</html>

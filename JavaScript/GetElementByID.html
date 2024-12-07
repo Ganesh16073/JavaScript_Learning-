@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function getById()
+        {
+            var obj=document.getElementById("txt");
+            var data=obj.value;
+            alert(data);
+        }
+
+    </script>
+    <style>
+        input{
+            width: 200px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text"  id="txt"  >
+    <input type="button" onClick="getById()" value="Click Me">
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    width: 100%;
+    min-height: 725px;
+    border: 1px solid #000;
+    align-content: center;
+    background-color: black;
+
+}
+.Mainbox{
+    
+    margin: auto;
+    width: 30%;
+    min-height: 450px;
+    border: 1px solid #000;
+    
+}
+.Mainbox .Result{
+    width: 100%;
+    height: 100px;
+}
+.Mainbox .Result input{
+    width: 100%;
+    height: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+table td {
+   
+    width: 25%;
+    height: 60px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #1f1e1e;
+    transition: background-color 0.3s;
+    color: white;
+}
+table td:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+table td:active {
+    background-color: #ccc;
+}
+.Result input{
+    font-size: 20px;
+}
