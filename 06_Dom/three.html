@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnig Dom</title>
+</head>
+<body>
+    <script>
+        const div=document.createElement('div')
+        console.log(div)
+        div.className="main"
+        div.id=Math.floor(Math.random()*10+1)
+        div.setAttribute("title","generate String")
+        div.innerHTML="Learn ReactJS and Spring BOOT" //first approach
+        const addText=document.createTextNode("chai aur code")
+        div.append(addText) // second approach to add text
+    </script>
+</body>
+</html>
