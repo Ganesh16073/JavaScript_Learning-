@@ -1,0 +1,198 @@
+1) container Class
+	container
+	container-fluid >>full width
+2) Heading class
+	h1
+	h2
+	h3...h6
+3) Display class >> large text size
+	display-1 >> largest text size
+	display-2
+	display-3.....display6 >> smallest large size
+4> small tag
+	<small>......</small> >> used as tag small text
+5) lead >> make paragraph standout
+	Lead .text-start: indicate left align text
+		.text-break: >> prevent long text from breaking layout
+		.text-center: >> align text center
+		.text-decoration-none: >> remove the underline from link
+		.text-end:  >> indicate right align text
+		.text-nowrap: >> indicate no wrap text 
+		.text-lowercase: >> indicate lower case text
+		.text-uppercase: >> indicate upper case text
+		.text-capitalize: >> make every first letter as capital
+		.list-unstyled: >> remove the bullets or numbers from list 
+		.list-inline: >> mark list as inline 
+6) Color
+	Text-color
+		text-muted
+		text-primary
+		text-secondary
+		text-danger
+		text-warning
+		text-success
+		text-white
+		text-dark
+		text-light
+		text-body
+	Background-colour
+		bg-primary
+		bg-secondary
+		bg-danger
+		bg-warning
+		bg-success
+		bg-white
+		bg-dark
+		bg-light
+7) Table
+	.table
+		<thead> <tr> <th>..</th> </tr> </thead>
+
+	.table table-striped >> add zebra-striped
+	.table table-bordered
+	.table table-hover
+	.table-dark, table-danger, table-success.......  >>table background colour
+	.table table-borderless
+8) Image
+	.rounded
+	.rounded-circle
+	.img-thumbnail >>used to add border
+9) Alert
+	.alert alert-success, alert-danger,alert-info,alert,warning
+	.alert-link
+	.alert-info
+10) Button
+	.btn
+	.btn btn-primary
+	.btn-secondary
+	.btn-warning
+	.btn-danger
+	.btn-success
+	.btn-info
+	.btn-outline-danger 
+	.btn-outline-primary 	
+
+	btn btn-lg >>large size button
+	btn-sm
+
+	btn btn-block >> occupie full width
+
+	.but-group >>used to arrange all button in line
+11) Spinner
+	    <span class="spinner-border spinner-border-sm"></span>
+14) DropDown 
+	<button  class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">Services
+	  <div class="dropdown-menu bg-danger">
+	    	<a href="#" class="dropdown-item text-white bg-danger">Training</a> 
+	        <a href="#" class="dropdown-item text-white bg-danger">Placement</a>
+	  </div>
+        </button>
+15) Badge
+	<spam class="badge bg-success"><spam>
+	Badge rounded-pill
+	In button:>> 
+		<button type="button" name="s" class="btn btn-success btn-lg">
+         Product in Stock <span class="badge bg-white text-danger">100</span>
+     		</button>
+16)progress bar
+	.progress >>parent div
+	.progress-bar >>child div
+	.progress-bar progress-bar-striped
+17) Spinner
+	.spinner-border
+	.spinner-grow
+18) Pagination
+	.pagination>> Parant class
+	.page-item
+	.page-link
+19) List Group
+	.list-group -->> parent class
+	.list-group-item
+		<ul class="list-group">		
+     		 <li class="list-group-item">JAVA</li>
+     		 <li class="list-group-item">PHP</li>
+     		 <li class="list-group-item">.NET</li>
+     		 <li class="list-group-item">SQL</li>
+     		 <li class="list-group-item">CSS</li>
+     		</ul>
+	.list-group-item-action >>hover
+	.list-group-flush >>remove border
+
+	.list-group-numbered >> used in ordered class
+	.list-group-horizontal 
+	.list-group-item-dark  >>background colour
+20)Cards
+	.card: it is root class which helps us to create card.
+	.card-body: this class helps us to create body of the card 
+	.card-header: this class helps us to create card header
+	.card-footer: this class helps us to create card footer.
+
+	.card-img-top  >> add image in card at top
+	.card-img-overlay 
+		<div class="card img-fluid" style="width:500px">
+   		 <img class="card-img-top" src="java.png" alt="Card image" style="width:100%">
+   		 <div class="card-img-overlay">
+    		  <h4 class="card-title">John Doe</h4>
+     		 <p class="card-text">Some example text some example text. Some example text some example text. Some example text some 		example text. Some example text some example text.</p>
+     		 <a href="#" class="btn btn-primary">See Profile</a>
+    		</div>
+ 		 </div>
+		</div>
+
+21) nav
+		<div class="container m-5 p-5">
+		<ul class="nav bg-danger justify-content-center /end /start	 ">
+         	<li class="nav-item"><a href="#" class="nav-link text-white">Home</a></li>
+	 	<li class="nav-item"><a href="#" class="nav-link text-white">About</a></li>
+	 	<li class="nav-item"><a href="#" class="nav-link text-white">Services</a></li>
+	 	<li class="nav-item"><a href="#" class="nav-link text-white">Contact Us</a></li>
+		</ul>
+ 		</div>
+22) navigation with dynamic page
+	.nav: it is root class all navigation bar.
+	.nav-tabs: it is root class create navigation bar using tabs.
+	.tab-content: it is container for all tab-pane means all tab pane must be included in tab-content class.
+	.tab-pane  container: it is option or content which we want to show then we click on particular tab just we need to 	provide its id as reference in tab menu.
+	Note: need to use attributes data-bs-toggle=”tabs”
+23) Nav Bar
+	.navbar: this is the root class which help us to create the navigation bar container 
+	.navbar-nav: this is the child class of navbar and which is used for create navigation link in navbar 
+	.nav-item : this is used for create navigation bar item
+	.nav-link: this is used for create the navigation link 
+	.navbar-brand: this is used for show the logo of company in navigation bar.
+	.navbar-text: show the text in navigation bar.
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+ 	 <div class="container-fluid">
+  	  <a class="navbar-brand text-white" href="#">Navbar</a>
+   	 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    	  <span class="navbar-toggler-icon"></span>
+   	 </button>
+   	 <div class="collapse navbar-collapse" id="navbarNav">
+   	   <ul class="navbar-nav">
+   	     <li class="nav-item">
+    	      <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+    	    </li>
+     	   <li class="nav-item">
+          <a class="nav-link text-white" href="#">Features</a>
+      	  </li>
+      	  <li class="nav-item">
+      	    <a class="nav-link text-white" href="#">Pricing</a>
+       	 </li>
+       	 <li class="nav-item">
+       	   <a class="nav-link text-white " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+       	 </li>
+     	 </ul>
+<form class="container">
+    <div class="input-group p-3">
+      <input type="text" class="form-control m-2" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" style="width:400px;">
+    <input type="submit" class="form-control btn btn-primary btn-sm m-2" value="search" aria-label="Username" aria-describedby="basic-addon1">
+
+  </form>
+    </div>
+  </div>
+</nav> 
+
+
+
+	

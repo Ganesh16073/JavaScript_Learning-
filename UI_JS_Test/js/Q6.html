@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let getArray1 = () => {
+          let input = document.getElementById('arrayInput1').value;
+          let array = input.split(","); 
+          return array;
+        }
+        let getArray2 =() => {
+          let input = document.getElementById('arrayInput2').value;
+          let array = input.split(","); 
+          return array;
+        }
+     
+        let out =()=>
+        {
+            let array1=getArray1()
+            let array2=getArray2()
+            let output=[...array1,...array2]
+            console.log(output);
+            
+            document.getElementById("output").innerText=output;
+        }
+      </script>
+</head>
+<body>
+    <h1>Enter the First Array</h1>
+    <input type="text" id="arrayInput1" placeholder="Enter values separated by commas" oninput="getArray1();out();">
+    <br>
+    <h1>Enter the Second Array</h1>
+    <input type="text" id="arrayInput2" placeholder="Enter values separated by commas" oninput="getArray2();out();">
+    <br>
+    <h1>Concate Output is</h1>
+    <span id="output" onchange="out()"></span>
+
+</body>
+</html>
+
+
+
