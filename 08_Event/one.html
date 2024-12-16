@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="Aimages">
+        <li>
+            <img id="Lion" src="https://via.placeholder.com/150/0000FF/808080?text=Lion" alt="Lion">
+        </li>
+        <li>
+            <img id="Tiger" src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Tiger" alt="Tiger">
+        </li>
+        <li>
+            <img id="Elephant" src="https://via.placeholder.com/150/FFFF00/000000?text=Elephant" alt="Elephant">
+        </li>
+        <li>
+            <a href="https://www.google.com/" id="google"><img id="Zebra" src="https://via.placeholder.com/150/00FF00/0000FF?text=Zebra" alt="Zebra"></a>
+        </li>
+        
+    </ul>
+</body>
+<script>
+    document.getElementById("Aimages").addEventListener('click',function(e)
+    {
+        console.log("clicked inside ul images");
+    },false) // 3 rd Paran=meter is for Probagation; false is default; it is known as bubbling up' means (bottom to up) inside to outer,child to parent
+    document.getElementById("Lion").addEventListener('click',function(e)
+    {
+        console.log("clicked on Lion images");
+        e.stopPropagation() // stop probagation
+    },true) // it is capturing means top to bottom or parrent to child
+    
+    document.getElementById("google").addEventListener('click',function(e)
+    {
+        console.log("Google clcked");
+        
+        e.preventDefault() // ifwe want to stop navigation(Bubbling)
+    },false)
+</script>
+</html>
