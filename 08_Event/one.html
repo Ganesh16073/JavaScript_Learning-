@@ -23,10 +23,11 @@
     </ul>
 </body>
 <script>
-    document.getElementById("Aimages").addEventListener('click',function(e)
-    {
-        console.log("clicked inside ul images");
-    },false) // 3 rd Paran=meter is for Probagation; false is default; it is known as bubbling up' means (bottom to up) inside to outer,child to parent
+    // document.getElementById("Aimages").addEventListener('click',function(e)
+    // {
+    //     e.preventDefault()
+    //     console.log("clicked inside ul images");
+    // },false) // 3 rd Paran=meter is for Probagation; false is default; it is known as bubbling up' means (bottom to up) inside to outer,child to parent
     document.getElementById("Lion").addEventListener('click',function(e)
     {
         console.log("clicked on Lion images");
@@ -39,5 +40,18 @@
         
         e.preventDefault() // ifwe want to stop navigation(Bubbling)
     },false)
+
+    document.querySelector("#Aimages").addEventListener('click',function(e)
+    {
+        // e.preventDefault()
+        console.log(e.target.parentNode)// tagget will get the html tag
+        let removeIt=e.target.parentNode
+        if(e.target.tagName=='IMG')
+        {
+            removeIt.remove()
+        }
+       
+        
+    })
 </script>
 </html>
