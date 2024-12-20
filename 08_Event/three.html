@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>JavaScript SetIntervel</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let a=0
+    // setInterval(function()
+    // {
+    //     console.log(`Value id  ${a++}`)
+    // },1000);
+
+    const print=function()
+    {
+        console.log(`Value id  ${a++}`)
+    }
+
+    let init;
+
+   document.querySelector("#start").addEventListener("click",function()
+    {
+        init= setInterval(print,1000)    // it is call back function whic is used to execute infintve times
+    })
+
+    document.querySelector("#stop").addEventListener("click",function()
+    {
+        clearInterval(init)
+        console.log(`Stoped`);
+        
+    })
+</script>
+</html>

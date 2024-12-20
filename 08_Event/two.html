@@ -28,7 +28,7 @@
 
     const stopMe=setTimeout(change,3000)
     
-    document.querySelector("#stop").addEventListener("click",function(){
+    document.querySelector("#stop").addEventListener("click",function(){ // using ClearTiout function ew can Stop the callBack Functions 
         clearTimeout(change)
         console.log("Stopped")
     })
