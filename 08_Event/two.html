@@ -6,6 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Learnig Java Script</h1>
+    <button id="stop">Stop</button>
 </body>
+<Script>
+    // setTimeout(function(){ // standerd SetTime Out Function
+    //     console.log("Ganesh Kulkarni");
+        
+    // },2000)
+
+    // const sayGanesh=function() // used to store function and execute 
+    // {
+    //     console.log("Ganesh Kularni")
+    // }
+    // setTimeout(sayGanesh,2000)
+
+    const change=function()
+    {
+        document.querySelector("#stop").innerHTML="Changed By Inner Html"
+    }
+
+    const stopMe=setTimeout(change,3000)
+    
+    document.querySelector("#stop").addEventListener("click",function(){
+        clearTimeout(change)
+        console.log("Stopped")
+    })
+
+</Script>
 </html>
