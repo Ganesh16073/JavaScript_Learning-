@@ -21,12 +21,17 @@ let startChangingColour=function()
         document.body.style.backgroundColor=RandomColour()
         console.log("Start");
     }
-    interval=setInterval(col,1000)
+    if(interval==null)
+    {
+        interval=setInterval(col,1000)
+    }
+   
 }
 
 let stopChangigTime=function()
 {
     clearInterval(interval)
+    interval=null;
     console.log("Stoped");
     
 }

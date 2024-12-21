@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requestUrl='https://api.github.com/users/ganesh16073' // api request link
+
+    const xhr=new XMLHttpRequest(); // creating object of Request 
+    xhr.open('GET',requestUrl) // using get Mehood to get the read Data From Json // state 1
+    xhr.onreadystatechange=function() 
+    {
+        console.log(xhr.readyState);// state 4 ;::>> 0-> UNSENT, 1-> Opened, 2-> Header_Recived Send() 3-> Loading 4 -> Done
+        if(xhr.readyState===4)
+        {
+            // console.log(this.responseText); // Print all data
+            // const data=this.responseText // store all json
+            const data=JSON.parse(this.responseText) // parse Json to Object
+            console.log(typeof(data)); 
+            console.log("Ganesh Total Folowers =>> "+data.followers); // access Object
+            console.log("Ganesh Total Folowers =>> "+data.name); // access Object
+            console.log("Ganesh Total Folowers =>> "+data.id); // access Object
+            console.log("Ganesh Total Folowers =>> "+data.repos_url); // access Object
+        
+        }
+
+    }
+    xhr.send()
+    
+
+
+</script>
+</html>
