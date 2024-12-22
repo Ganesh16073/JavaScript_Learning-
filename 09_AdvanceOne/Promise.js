@@ -64,7 +64,7 @@ const promisFour=new Promise(function(resolve,reject)
             }
             else{
                 console.log("Some Error Is ................");
-                
+                reject("Some Thing Went Wrong") // if any error occure then it is executed 
             }
            
         },1000)
@@ -87,3 +87,32 @@ promisFour.then((user)=>
     console.log("Work Completed");
     
 })
+
+
+const PromisFive=new Promise(function(resolve,reject){ // another way to handle using async and Await
+    setTimeout(function(){
+        const error=true
+        if(error)
+        {
+            resolve({username:"JavaScript",location:"Pune"})
+        }
+        else
+        {
+            reject("SomeThing Went Wrong")
+        }
+       
+    },1000)
+})
+
+async function consumePromiseFive() 
+{
+    try{
+        const response=await PromisFive
+        console.log(response);
+        
+    }catch(error)
+    {
+        console.log(error);
+    }
+}
+consumePromiseFive()
