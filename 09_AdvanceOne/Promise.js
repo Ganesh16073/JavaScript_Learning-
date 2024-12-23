@@ -116,3 +116,50 @@ async function consumePromiseFive()
     }
 }
 consumePromiseFive()
+
+
+async function getAllGithubData() // it return promise
+{
+   try {
+        const response=await fetch('https://api.github.com/users/ganesh16073')
+        console.log(typeof response);
+        const data =await response.json()
+        console.log(data);
+        console.log();
+   } catch (error) {
+    console.log(error);
+   }
+   
+}
+
+getAllGithubData()
+
+fetch('https://api.github.com/users/ganesh16073')
+.then((response)=>{
+    return response.json()
+})
+.then((data)=> {
+    console.log("Ganesh Data Is ||");
+    console.log(data);
+}
+)
+.catch((error)=> console.log(error)
+)
+
+/* Internal Working of Fetch()
+
+                  Return Promise
+                        ^
+                        |
+                Const Response = fetch()
+                                   |
+        |`````````````````````````````````````````````````````````````|
+    Data=" ";                                                     Web /node Api
+    onFullFiled[]                                                     |                                                
+    OnRejection[]                                        |`````````````````````````````|
+                                                     Resolve()                      Reject()
+
+
+
+
+    */
